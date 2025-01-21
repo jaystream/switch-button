@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<style type="text/css">
+		/* The switch - the box around the slider */
+		.btn-switch {
+		  background-color: #e1dede;
+		  border-radius: 5rem;
+		  width: 300px;
+		  height: 64px;
+		  position: relative;
+		}
+		.btn-switch button {
+		  float: left;
+		  width: 150px;
+		  border:none;
+		  padding:1rem;
+		  color: #7b7b7b;
+		  background: transparent;
+		  border-radius: 5rem;
+		  position: relative;
+		}
+		.btn-switch .active-switch.button2 {
+		  transition: all 0.2s ease-in-out;
+		  border-radius: 5rem;
+		  width: 50%;
+		  border: 1px solid #66cccc;
+		  background-color: #fff;
+		  height: 62px;
+		  position: absolute;
+		  top: 0;
+		  -webkit-transform: translateX(100%);
+		  -khtml-transform: translateX(100%);
+		  -moz-transform: translateX(100%);
+		  -ms-transform: translateX(100%);
+		  -o-transform: translateX(100%);
+		  transform: translateX(100%);
+		}
+		.btn-switch .active-switch.button1 {
+		  transition: all 0.2s ease-in-out;
+		  border-radius: 5rem;
+		  width: 50%;
+		  border: 1px solid #66cccc;
+		  background-color: #fff;
+		  height: 62px;
+		  position: absolute;
+		  top: 0;
+		  -webkit-transform: translateX(0%);
+		  -khtml-transform: translateX(0%);
+		  -moz-transform: translateX(0%);
+		  -ms-transform: translateX(0%);
+		  -o-transform: translateX(0%);
+		  transform: translateX(0%);
+		}
+	</style>
+</head>
+<body>
+	<div class="btn-switch">
+		<!-- button2 class for the active button by default -->
+	    <div class="active-switch button2"></div>
+	    <button data-btn="button1">
+	        <strong>Button 1</strong><br>
+	        <small>Button 1	description</small>
+	    </button>
+	    <button data-btn="button2">
+	        <strong>Button 2</strong><br>
+	        <small>Button 2	description</small>
+	    </button>
+	    
+	</div>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		//////////////////////////////////////////////////
+		///website scripts                              //
+		///@author Jay-r Simpron <ssj.simpron@gmail.com>//
+		//////////////////////////////////////////////////
+
+		(function ($, window, document) {
+		    "use strict";
+		    // Set all variables to be used in scope
+		    var _args = window.xwbVar;
+		    /**
+		     * Document ready
+		     */
+		    $(function () {
+		    // DOM ready
+		    
+		    	/**
+		    	 * Button click event
+		    	 */
+		        $(document).on('click','.btn-switch button', function(e){
+		            e.preventDefault();
+		            let btn = $(this).data('btn');
+		            $('.active-switch').removeClass('button1 button2').addClass(btn);
+		            
+		        });
+		    }); /* /Document ready */
+		    
+		}(window.jQuery, window, document));
+	</script>
+</body>
+</html>

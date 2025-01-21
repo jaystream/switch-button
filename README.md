@@ -91,9 +91,3 @@ $(document).on('click','.btn-switch button', function(e){
 
 ![](https://avatars.githubusercontent.com/u/27113334?s=400&u=52924d8cb1f9f6f28d7a5fe67c29f258f2e358a2&v=4)
 
-
-**Table of Contents**
-
-[TOCM]
-
-[TOC]
